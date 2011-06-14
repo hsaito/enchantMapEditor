@@ -45,7 +45,7 @@ var mapForm = {
 	acceptButton: (function() {
 		var element = document.createElement('input');                            
 		element.type = 'button';                                              
-		element.value = '作成';
+		element.value = 'Create';
 		element.onclick = function() {
 			var w = document.getElementById('widthBox');
 			var h = document.getElementById('heightBox');                               
@@ -65,11 +65,11 @@ var mapForm = {
 				app.mapHeight = hv;
 				app.image.onload = function() {
 					if (app.extendMode && this.width != 256 || this.height != 256) {
-						alert('256x256pxの画像を使用してください');
+						alert('Use graphic file with a dimension of 256x256px');
 						return;
 					}
 					start(wv, hv, iv, ev);
-					edit.innerHTML+= '矢印キーでスクロール';
+					edit.innerHTML+= 'Scroll using arrow keys.';
 					editorTabs.initialize();
 					edit.appendChild(editorTabs.element);
 					edit.appendChild(icons.create());
@@ -90,13 +90,13 @@ var mapForm = {
 	})(),
 	create: function() {
 		var form = document.createElement('div');
-		form.innerHTML += '横幅: ';
+		form.innerHTML += 'Width: ';
 		form.appendChild(this.widthBox);
-		form.innerHTML += '<br />縦幅: ';
+		form.innerHTML += '<br />Height: ';
 		form.appendChild(this.heightBox);
-		form.innerHTML += '<br />画像: ';
+		form.innerHTML += '<br />Grpahics: ';
 		form.appendChild(this.imageMenu);
-		form.innerHTML += '<br />マップ拡張を有効にする';
+		form.innerHTML += '<br />Enable Map Extensions';
 		form.appendChild(this.extendOption);
 		form.innerHTML += '<br />';
 		form.appendChild(this.acceptButton);
@@ -115,7 +115,7 @@ var editorTabs = {
 	})(),
 	initialize: function() {
 		this.element.appendChild(this.addTabButton);
-		this.addNewTab('coltab', '判定');
+		this.addNewTab('coltab', 'Detection');
 		this.addNewTab('bgtab1', 'tab1', true);
 		this.addNewTab('bgtab2', 'tab2');
 		this.applyColors();
@@ -310,7 +310,7 @@ var geneButton = (function() {
 	var element = document.createElement('input');
 	element.type = 'button';
 	element.id = 'geneButton';
-	element.value = 'コード生成';
+	element.value = 'Generate Codes';
 	element.onclick = function() {
 		var txt = '';
 		var w = window.open('about:blank', '_blank');
@@ -329,7 +329,7 @@ var loadButton = (function() {
 	var element = document.createElement('input');
 	element.type = 'button';
 	element.id = 'loadButton';
-	element.value = 'コード読み込み';
+	element.value = 'Load';
 	element.onclick = function() {
 		var w = window.open('about:blank', '_blank');
 		var input = document.createElement('textarea');
@@ -338,7 +338,7 @@ var loadButton = (function() {
 		input.cols = 120;
 		var accept = document.createElement('input');
 		accept.type = 'button';
-		accept.value = '読み込み';
+		accept.value = 'Load';
 		accept.type = 'button';
 		accept.onclick = function() {
 			try {
