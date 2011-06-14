@@ -94,7 +94,7 @@ var mapForm = {
 		form.appendChild(this.widthBox);
 		form.innerHTML += '<br />Height: ';
 		form.appendChild(this.heightBox);
-		form.innerHTML += '<br />Grpahics: ';
+		form.innerHTML += '<br />Graphics: ';
 		form.appendChild(this.imageMenu);
 		form.innerHTML += '<br />Enable Map Extensions';
 		form.appendChild(this.extendOption);
