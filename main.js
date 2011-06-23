@@ -2,7 +2,7 @@ window.onload = function() {
 	enchant();
 	var stage = document.getElementById('enchant-stage');
 	stage.appendChild(mapForm.create());
-	document.getElementById('checkbox').checked = true;
+	document.getElementById('checkbox').checked = false;
 }
 var app = {};
 app.maps= {};
